@@ -11,9 +11,9 @@ The project is defined in the [`project-node`](./project-node) folder. It is a m
   * second, via esm import in the FFI
 
 To run it in node, we currently need to define a simple wrapper function for our application, see [`index.mjs`](./project-node/index.mjs). This is probably something that `spago run` should generate.
-
+The alternative is to run it fromt he cli:
 ```
-node -e "import('./output/Main/index.js').then(m => m.main())"`
+node -e "import('./output/Main/index.js').then(m => m.main())"
 ```
 
 ## Running
