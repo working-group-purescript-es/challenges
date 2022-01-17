@@ -1,0 +1,17 @@
+{
+  "name": "project-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "example-cjs": "file:../example-cjs",
+    "example-esm": "file:../example-esm",
+    "example-ps-esm": "file:../example-ps-esm"
+  }
+}
