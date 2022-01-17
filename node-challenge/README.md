@@ -11,6 +11,10 @@ The project is defined in the [`project-node`](./project-node) folder. It is a m
 
 To run it in node, we currently need to define a simple wrapper function for our application, see [`index.mjs`](./project-node/index.mjs). This is probably something that `spago run` should generate.
 
+```
+node -e "import('./output/Main/index.js').then(m => m.main())"`
+```
+
 ## Running
 
 ```bash
@@ -21,7 +25,9 @@ cd ..
 
 cd project-node
 spago build
-node index.mjs
+node index.mjs # use the wrapper
+# or run it directly
+node -e "import('./output/Main/index.js').then(m => m.main())"
 ```
 
 ## Output
