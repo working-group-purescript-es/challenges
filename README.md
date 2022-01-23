@@ -2,4 +2,4 @@
 
 
 * [node challenge](./node-challenge/README.md)
-* browser challenge (TBD)
+* [bundle challenge](./bundle-challenge/README.md)
