@@ -4,6 +4,7 @@ import Effect
 import Prelude
 import Effect.Class.Console (log)
 import Example.ESM (helloFromPSESM)
+import Cjs as Cjs 
 
 foreign import helloFromCJS :: String 
 foreign import helloFromESM :: String
@@ -16,3 +17,5 @@ main = do
     log helloFromESM
     log helloFromPSESM
     log $ helloFromPSESMviaFFI <> " via FFI"
+    h <- Cjs.anotherHelloFromCJs
+    log $ "another" <> h
