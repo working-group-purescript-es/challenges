@@ -81,11 +81,9 @@ When you are writing JS FFI the most common situations where you will see change
 
   In v0.15 you need to use `export` 
   ```javascript
-  export const world = "world 🗺"
-  // or
-  export var world = "world 🗺"
+  export const world = "🗺"
 
-  export function greet() { return "hello" + world }
+  export function greet() { return "hello " + world }
   ```
 
 Fortunately, there are tools that can automatically perform this conversion for you in most of the cases.
