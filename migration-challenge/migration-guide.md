@@ -37,7 +37,7 @@ However, this has a couple of implications that will need you to migrate your co
 
 * v0.15 drops `purs bundle` and relies on an external bundlers
   
-  Yes, you heard right. The Purescript compiler no longer comes with a built-in `bundle` command. `purs bundle` was already broken in a couple of ways, didn't do great job on bundle size and was basically unmaintained. Updating `purs bundle` to ESM would have required a considerable ammount of work, taking time from the compiler team to work on more urgent matters in the compiler.
+  Yes, you heard right. The Purescript compiler no longer comes with a built-in `bundle` command. `purs bundle` was already broken in a couple of ways, didn't do a great job on bundle size, and was basically unmaintained. Updating `purs bundle` to ESM would have required a considerable amount of work, taking time away from the compiler team to work on more urgent matters in the compiler.
 
   Therefore, v0.15 relies on an external bundler like `esbuild`, `webpack` or `parcel`. And that is good news because these tools are used industry-wide and do a much better job on bundling than `purs bundle`. You will see significantly improved bundle sizes with v0.15, like e.g. for [purescript-halogen template](https://github.com/purescript-halogen/purescript-halogen-template):
 
