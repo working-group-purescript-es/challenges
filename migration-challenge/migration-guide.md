@@ -37,9 +37,9 @@ However, this has a couple of implications that will need you to migrate your co
 
 * v0.15 drops `purs bundle` and relies on an external bundlers
   
-  Yes, you heard right. The Purescript compiler no longer comes with a built-in `bundle` command. Updating `purs bundle` to ESM would have required considerable ammount of work, while at the same time being buggy, doing a poor job on bundle size and taking time from the compiler time to work on more useful things.
+  Yes, you heard right. The Purescript compiler no longer comes with a built-in `bundle` command. `purs bundle` was already broken in a couple of ways, didn't do great job on bundle size and was basically unmaintained. Updating `purs bundle` to ESM would have required a considerable ammount of work, taking time from the compiler team to work on more urgent matters in the compiler.
 
-  So v0.15 relies on an external bundler and that is good news because tools like `esbuild`, `webpack` or `parcel` do a much better job on bundling than `purs bundle`. You will see significantly improved bundle sizes with v0.15, like e.g. for [purescript-halogen template](https://github.com/purescript-halogen/purescript-halogen-template):
+  Therefore, v0.15 relies on an external bundler like `esbuild`, `webpack` or `parcel`. And that is good news because these tools are used industry-wide and do a much better job on bundling than `purs bundle`. You will see significantly improved bundle sizes with v0.15, like e.g. for [purescript-halogen template](https://github.com/purescript-halogen/purescript-halogen-template):
 
   | Bundler         | Size |
   |--------------|-----------|
@@ -75,8 +75,8 @@ When you are writing JS FFI the most common situations where you will see change
 
   In v0.14 you had to use `exports`
   ```javascript
-  exports.world = "world 🗺"
-  exports.greet = function() { return "hello" + world }
+  exports.world = "🗺"
+  exports.greet = function() { return "hello " + world }
   ```
 
   In v0.15 you need to use `export` 
